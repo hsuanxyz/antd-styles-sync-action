@@ -1,6 +1,6 @@
 {
   "name": "antd-styles-sync-action",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "Synchronize the styles of Ant Design for NG-ZORRO",
   "scripts": {
     "build": "ncc build index.js"
