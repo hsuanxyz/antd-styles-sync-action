@@ -21,8 +21,8 @@ class Bot {
     logger.info(`========================= NG-ZORRO Syncer ==========================`);
   }
 
-  checkOnceWithVersion(version) {
-    this.checkUpdate(version)
+  async checkOnceWithVersion(version) {
+    return this.checkUpdate(version)
       .then(data => {
         if (data !== null) {
           return this.syncStyle(data);

@@ -1,10 +1,14 @@
 name: 'Synchronize Ant Design Styles'
 description: 'Synchronize the styles of Ant Design for NG-ZORRO'
+author: 'hsuanxyz'
 inputs:
   account_token:
     description: "The token of the syncer's account"
     default: 'Invalid token'
     required: true
+  version:
+    description: "Which version want to synchronize"
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
