@@ -27,7 +27,8 @@ $ npm run build
 ## Release
 
 ```
-git commit -m ".."
-git tag -a -m ".." v1
-git push --follow-tags
+$ npm run build
+$ git commit -m ".."
+$ git tag -a -m ".." v1
+$ git push --follow-tags
 ```
