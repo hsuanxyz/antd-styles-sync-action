@@ -8,6 +8,7 @@ inputs:
     required: true
   version:
     description: "Which version want to synchronize"
+    default: '${{ github.event.inputs.version }}'
     required: false
 runs:
   using: 'node12'

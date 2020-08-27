@@ -26,7 +26,7 @@ const core = __webpack_require__(42186);
 
 try {
     const token = core.getInput('account_token');
-    const version = process.env['github.event.inputs.version'];
+    const version = core.getInput('version');
     const originOwner = 'ng-zorro-bot';
     const upstreamOwner = 'NG-ZORRO';
     const username = 'ng-zorro-bot';
