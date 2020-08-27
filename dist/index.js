@@ -26,12 +26,18 @@ const core = __webpack_require__(42186);
 
 try {
     const token = core.getInput('account_token');
+    const version = core.getInput('version');
     const originOwner = 'ng-zorro-bot';
     const upstreamOwner = 'NG-ZORRO';
     const username = 'ng-zorro-bot';
     const userEmail = 'ng-zorro@users.noreply.github.com';
     const bot = new Bot({token, originOwner, upstreamOwner, username, userEmail});
-    bot.run().then();
+    if (version) {
+        bot.checkOnceWithVersion(version).then()
+    } else {
+        bot.run().then();
+
+    }
 } catch (error) {
     core.setFailed(error.message);
 }
@@ -96091,8 +96097,8 @@ class Bot {
     logger.info(`========================= NG-ZORRO Syncer ==========================`);
   }
 
-  checkOnceWithVersion(version) {
-    this.checkUpdate(version)
+  async checkOnceWithVersion(version) {
+    return this.checkUpdate(version)
       .then(data => {
         if (data !== null) {
           return this.syncStyle(data);
