@@ -3,7 +3,7 @@ const core = require('@actions/core');
 
 try {
     const token = core.getInput('account_token');
-    const version = core.getInput('version');
+    const version = process.env['github.event.inputs.version'];
     const originOwner = 'ng-zorro-bot';
     const upstreamOwner = 'NG-ZORRO';
     const username = 'ng-zorro-bot';

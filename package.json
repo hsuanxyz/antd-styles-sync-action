@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.5",
+    "@actions/github": "^4.0.0",
     "@octokit/rest": "^15.7.0",
     "@vercel/ncc": "^0.24.0",
     "fs-extra": "^6.0.1",
